@@ -24,9 +24,9 @@ import javafx.stage.Stage;
 * selection by the user
 *
 *
-* @author  Emanuel Daggett
-* @version  5.0
-* Description:  A class that handles all draw options for MSPaint applet
+* @author   Emanuel Daggett
+* @version  4.0
+* @since    9/19/2017
 * **/
 
 public class Tools {
