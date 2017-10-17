@@ -1,10 +1,5 @@
-/*********************************************************************
-* File name:	drawTools.java
-* Coded by:	Emanuel Daggett (emanuel.daggett@valpo.edu)
-* Date: 	9/19/17	
-* Description:  A class that handles all draw options for MSPaint applet
-* *********************************************************************/
 package Paint;
+
 import java.util.Stack;
 import javafx.event.ActionEvent;
 import javafx.scene.Scene;
@@ -23,6 +18,16 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+
+/**
+* Tools class is made up of methods specified for editing options available for 
+* selection by the user
+*
+*
+* @author	Emanuel Daggett
+* @version  5.0
+* Description:  A class that handles all draw options for MSPaint applet
+* **/
 
 public class Tools {
     //FILLS THE ENTIRE CANVAS WITH DESIRED COLOR CHOSEN BY USER
@@ -165,12 +170,14 @@ public class Tools {
         });
     }
     
+    //METHOD THAT CLEARS MOUSE EVENT DATA UPON THE SLECTION OF A NEW TOOL
     public static void clear(Canvas canvas, GraphicsContext gc){
         canvas.setOnMousePressed(null);
         canvas.setOnMouseDragged(null);
         canvas.setOnMouseReleased(null);
         canvas.setOnMouseClicked(null);
     }
+    
     //ALLOWS USER TO UTILIZE A COLOR THAT IS ALREADY IN USE OR DISPLAYED
     public static void dropper(Canvas canvas, GraphicsContext gc, StackPane pane, Stack<Image> stack, ColorPicker cp){
         clear(canvas, gc);
@@ -221,11 +228,13 @@ public class Tools {
         });
      }
    
+    //METHOD THAT ALLOWS USER TO SAVE CHANGES MADE TO THE CANVAS AS A PICTURE
     public static void snapshot(StackPane pane, Stack<Image> stack){
         Image image = pane.snapshot(null, null);
         stack.push(image);
     } 
     
+    //METHOD THAT RESTORES PREVIOUS WORK
     public static void undo(GraphicsContext gc, Stack<Image> stack){
         if(!stack.empty()){
               gc.drawImage(stack.pop(), 0,0);
