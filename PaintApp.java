@@ -43,8 +43,9 @@ import javafx.stage.WindowEvent;
  * This file is responsible for running and displaying the application to the 
  * user once the program has been initiated 
  *
- * @author Emanuel Daggett
+ * @author  Emanuel Daggett
  * @version 5.0
+ * @since   9/10/17
  **/
 
 public class PaintApp extends Application {
