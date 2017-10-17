@@ -43,8 +43,8 @@ import javafx.stage.WindowEvent;
  * This file is responsible for running and displaying the application to the 
  * user once the program has been initiated 
  *
- * @Author Emanuel Daggett
- * @Version 5.0
+ * @author Emanuel Daggett
+ * @version 5.0
  **/
 
 public class PaintApp extends Application {
@@ -144,7 +144,7 @@ public class PaintApp extends Application {
           Tools.undo(gc, stack);
        });
        
-       //IMPLEMENTATION OF CLEAR
+       //IMPLEMENTATION OF CLEAR FUNCTION FOR ENTIRE CANVAS
        clear.setOnAction((ActionEvent e) -> {
            gc.clearRect(0,0,canvasWidth,canvasHeight);
        });
@@ -190,7 +190,7 @@ public class PaintApp extends Application {
            else;
        });
       
-       //SMARTSAVE IMPLEMENTAITION
+       //SMARTSAVE IMPLEMENTAITION MUST CONFIRM CLOSE
         primaryStage.setOnCloseRequest((WindowEvent event) -> {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setHeaderText("SmartSave");
