@@ -39,11 +39,12 @@ import javafx.stage.WindowEvent;
 /**
  * Paint Application.
  * 
- * Paint is the main and executable file for the entire Paint Application
+ * PaintApp is the main and executable file for the entire Paint Application
  * This file is responsible for running and displaying the application to the 
  * user once the program has been initiated 
  *
- * 
+ * @Author Emanuel Daggett
+ * @Version 5.0
  **/
 
 public class PaintApp extends Application {
